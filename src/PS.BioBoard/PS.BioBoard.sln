@@ -3,17 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PS.BioBoard.Web", "PS.BioBoard.Web\PS.BioBoard.Web.csproj", "{D30361A8-00BB-425E-B557-B1C6B85BDC2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PS.BioBoard.Web", "PS.BioBoard.Web\PS.BioBoard.Web.csproj", "{D30361A8-00BB-425E-B557-B1C6B85BDC2B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{DDA2B1D8-B1C4-4A35-9742-AC7A1CDBFB85}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{1AEE6B6C-276D-4194-A0E1-E7A8129DD1CB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{E47E3FD7-E6AA-4D2A-AB58-297A1B9CFB5C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PS.BioBoard.Domain", "PS.BioBoard.Domain\PS.BioBoard.Domain.csproj", "{76CABD43-C990-452B-8089-9D8ADFF61080}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PS.BioBoard.DAL", "PS.BioBoard.DAL\PS.BioBoard.DAL.csproj", "{6B56B7EB-B117-44DD-9EAE-9A0673750A42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PS.BioBoard.Domain", "PS.BioBoard.Domain\PS.BioBoard.Domain.csproj", "{76CABD43-C990-452B-8089-9D8ADFF61080}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +25,6 @@ Global
 		{76CABD43-C990-452B-8089-9D8ADFF61080}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76CABD43-C990-452B-8089-9D8ADFF61080}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76CABD43-C990-452B-8089-9D8ADFF61080}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6B56B7EB-B117-44DD-9EAE-9A0673750A42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6B56B7EB-B117-44DD-9EAE-9A0673750A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6B56B7EB-B117-44DD-9EAE-9A0673750A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6B56B7EB-B117-44DD-9EAE-9A0673750A42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,7 +32,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D30361A8-00BB-425E-B557-B1C6B85BDC2B} = {DDA2B1D8-B1C4-4A35-9742-AC7A1CDBFB85}
 		{76CABD43-C990-452B-8089-9D8ADFF61080} = {1AEE6B6C-276D-4194-A0E1-E7A8129DD1CB}
-		{6B56B7EB-B117-44DD-9EAE-9A0673750A42} = {E47E3FD7-E6AA-4D2A-AB58-297A1B9CFB5C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C392F124-8CFD-4031-B663-6D5DA3DE24A7}
