@@ -1,28 +1,37 @@
 
 
+using PS.BioBoard.Application;
+using PS.BioBoard.Infrastructure;
+using PS.BioBoard.Web;
+
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddControllersWithViews();
-
-var app = builder.Build();
-
-
-if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Home/Error");
-    
-    app.UseHsts();
+    builder.Services
+        .AddPresentation()
+        .AddApplication()
+        .AddInfrastructure(builder.Configuration);
 }
 
-app.UseHttpsRedirection();
-app.UseStaticFiles();
+var app = builder.Build();
+{
 
-app.UseRouting();
+    if (!app.Environment.IsDevelopment())
+    {
+        app.UseExceptionHandler("/Home/Error");
 
-app.UseAuthorization();
+        app.UseHsts();
+    }
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    app.UseHttpsRedirection();
+    app.UseStaticFiles();
 
-app.Run();
+    app.UseRouting();
+
+    app.UseAuthorization();
+
+    app.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+
+    app.Run();
+}
