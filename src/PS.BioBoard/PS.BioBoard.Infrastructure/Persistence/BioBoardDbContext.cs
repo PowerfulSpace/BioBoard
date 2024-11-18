@@ -12,5 +12,13 @@ namespace PS.BioBoard.Infrastructure.Persistence
 
         public DbSet<Person> Persons { get; set; } = null!;
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder
+                .ApplyConfigurationsFromAssembly(typeof(BioBoardDbContext).Assembly);
+
+            base.OnModelCreating(modelBuilder);
+        }
+
     }
 }
