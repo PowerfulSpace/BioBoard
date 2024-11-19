@@ -1,0 +1,33 @@
+﻿@model IEnumerable<PS.BioBoard.Domain.Entities.Person>
+
+@{
+    ViewData["Title"] = "Person List";
+}
+
+<h2>Person List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var person in Model)
+        {
+            <tr>
+                <td>@person.Name</td>
+                <td>@person.Email</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@person.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@person.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@person.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create">Create New</a>
