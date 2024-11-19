@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace PS.BioBoard.Domain.Entities
+﻿namespace PS.BioBoard.Domain.Entities
 {
     public class Person
     {
