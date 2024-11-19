@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PS.BioBoard.Application.Services.Persons;
-using PS.BioBoard.Domain.Entites;
+using PS.BioBoard.Domain.Entities;
 
 namespace PS.BioBoard.Web.Controllers
 {

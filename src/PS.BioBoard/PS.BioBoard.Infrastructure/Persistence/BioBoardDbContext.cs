@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PS.BioBoard.Domain.Entites;
+using PS.BioBoard.Domain.Entities;
 
 namespace PS.BioBoard.Infrastructure.Persistence
 {

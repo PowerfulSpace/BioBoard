@@ -1,4 +1,4 @@
-﻿namespace PS.BioBoard.Domain.Entites
+﻿namespace PS.BioBoard.Domain.Entities
 {
     public class Person
     {

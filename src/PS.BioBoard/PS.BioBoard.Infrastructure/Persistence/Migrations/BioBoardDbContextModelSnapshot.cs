@@ -22,7 +22,7 @@ namespace PS.BioBoard.Infrastructure.Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("PS.BioBoard.Domain.Entites.Person", b =>
+            modelBuilder.Entity("PS.BioBoard.Domain.Entities.Person", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()

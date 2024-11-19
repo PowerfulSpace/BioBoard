@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using PS.BioBoard.Domain.Entites;
+using PS.BioBoard.Domain.Entities;
 
 namespace PS.BioBoard.Infrastructure.Persistence.Configurations
 {

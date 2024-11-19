@@ -1,5 +1,5 @@
 ﻿using PS.BioBoard.Application.Common.Interfaces.Persistence;
-using PS.BioBoard.Domain.Entites;
+using PS.BioBoard.Domain.Entities;
 
 namespace PS.BioBoard.Application.Services.Persons
 {
