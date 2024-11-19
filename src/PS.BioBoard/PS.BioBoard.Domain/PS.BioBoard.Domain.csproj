@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\PS.BioBoard.DAL\PS.BioBoard.DAL.csproj" />
-  </ItemGroup>
-
 </Project>
