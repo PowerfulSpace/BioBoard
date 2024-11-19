@@ -14,6 +14,9 @@ namespace PS.BioBoard.Application
 
             services.AddValidatorsFromAssemblyContaining<PersonValidator>();
 
+            services.AddFluentValidationAutoValidation();
+            services.AddFluentValidationClientsideAdapters();
+
             return services;
         }
     }
