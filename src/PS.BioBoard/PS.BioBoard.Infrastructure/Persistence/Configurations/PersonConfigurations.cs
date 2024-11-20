@@ -29,7 +29,7 @@ namespace PS.BioBoard.Infrastructure.Persistence.Configurations
                 .HasMaxLength(100);
 
             builder.Property(p => p.PhoneNumber)
-                .HasMaxLength(11);
+                .HasMaxLength(13);
 
             builder.Property(p => p.ImageUrl)
                 .HasMaxLength(100);

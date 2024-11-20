@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PS.BioBoard.Infrastructure.Persistence;
 
@@ -11,9 +12,11 @@ using PS.BioBoard.Infrastructure.Persistence;
 namespace PS.BioBoard.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(BioBoardDbContext))]
-    partial class BioBoardDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241120000313_TheMaximumLengthOfThePhoneHasBeenChanged")]
+    partial class TheMaximumLengthOfThePhoneHasBeenChanged
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

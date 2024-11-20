@@ -20,7 +20,7 @@ namespace PS.BioBoard.Application.Validators
 
             RuleFor(person => person.PhoneNumber)
                 .NotEmpty().WithMessage("Phone number is required.")
-                .Matches(@"^\+?\d{8,11}$").WithMessage("Phone number must be a valid format.");
+                .Matches(@"^\+?\d{8,13}$").WithMessage("Phone number must be a valid format.");
 
             RuleFor(person => person.ImageUrl)
                 .NotEmpty().WithMessage("Image URL is required.")
