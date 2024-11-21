@@ -1,7 +1,10 @@
 ﻿
 
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using PS.BioBoard.Application;
 using PS.BioBoard.Infrastructure;
+using PS.BioBoard.Infrastructure.Persistence;
 using PS.BioBoard.Infrastructure.Persistence.Initialization;
 using PS.BioBoard.Web;
 
@@ -29,7 +32,15 @@ var app = builder.Build();
     using (var scope = app.Services.CreateScope())
     {
         var services = scope.ServiceProvider;
-        await ApplicationDbContextSeed.SeedAsync(services);
+        var context = services.GetRequiredService<BioBoardDbContext>();
+
+        // Проверяем, если данные (например, роли и пользователи) отсутствуют, выполняем сидинг
+        var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+        if (!await roleManager.RoleExistsAsync("Admin"))
+        {
+            // Если роль Admin отсутствует, выполняем сидинг
+            await ApplicationDbContextSeed.SeedAsync(services);
+        }
     }
 
     app.UseHttpsRedirection();

@@ -30,7 +30,7 @@ namespace PS.BioBoard.Infrastructure.Persistence.Initialization
 
         private static async Task EnsureRolesAsync(RoleManager<IdentityRole> roleManager)
         {
-            var roles = new[] { "Administrator", "User" };
+            var roles = new[] { "Administrator", "User", "Manager" };
 
             foreach (var role in roles)
             {

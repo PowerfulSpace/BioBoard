@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PS.BioBoard.Application.Services.Persons;
 using PS.BioBoard.Domain.Entities;
 
 namespace PS.BioBoard.Web.Controllers
 {
+    [Authorize(Policy = "AdminPolicy")]
     public class PersonController : Controller
     {
         private readonly IPersonService _personService;
