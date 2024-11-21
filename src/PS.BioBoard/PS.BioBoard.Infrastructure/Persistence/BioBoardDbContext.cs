@@ -1,9 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using PS.BioBoard.Domain.Entities;
 
 namespace PS.BioBoard.Infrastructure.Persistence
 {
-    public class BioBoardDbContext : DbContext
+    public class BioBoardDbContext : IdentityDbContext<IdentityUser>
     {
         public BioBoardDbContext(DbContextOptions<BioBoardDbContext> options) : base(options)
         {

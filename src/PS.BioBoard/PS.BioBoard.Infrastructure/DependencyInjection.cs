@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PS.BioBoard.Application.Common.Interfaces.Persistence;
@@ -21,6 +22,10 @@ namespace PS.BioBoard.Infrastructure
         {
             services.AddDbContext<BioBoardDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<BioBoardDbContext>()
+                .AddDefaultTokenProviders();
 
             services.AddScoped<IPersonRepository, PersonRepository>();
 

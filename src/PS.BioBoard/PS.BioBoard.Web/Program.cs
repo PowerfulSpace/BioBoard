@@ -1,15 +1,18 @@
-
+﻿
 
 using PS.BioBoard.Application;
 using PS.BioBoard.Infrastructure;
+using PS.BioBoard.Infrastructure.Persistence.Initialization;
 using PS.BioBoard.Web;
 
 var builder = WebApplication.CreateBuilder(args);
 {
     builder.Services
-        .AddPresentation()
-        .AddApplication()
-        .AddInfrastructure(builder.Configuration);
+       .AddPresentation()
+       .AddApplication()
+       .AddInfrastructure(builder.Configuration);
+
+    builder.Services.AddRazorPages();
 }
 
 var app = builder.Build();
@@ -22,16 +25,26 @@ var app = builder.Build();
         app.UseHsts();
     }
 
+    // Выполняем сидинг
+    using (var scope = app.Services.CreateScope())
+    {
+        var services = scope.ServiceProvider;
+        await ApplicationDbContextSeed.SeedAsync(services);
+    }
+
     app.UseHttpsRedirection();
     app.UseStaticFiles();
 
     app.UseRouting();
 
-    app.UseAuthorization();
+    app.UseAuthentication();
+    app.UseAuthorization();  
 
     app.MapControllerRoute(
         name: "default",
         pattern: "{controller=Home}/{action=Index}/{id?}");
+
+    app.MapRazorPages();
 
     app.Run();
 }
