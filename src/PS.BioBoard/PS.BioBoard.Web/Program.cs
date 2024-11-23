@@ -1,7 +1,6 @@
 ﻿
 
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using PS.BioBoard.Application;
 using PS.BioBoard.Infrastructure;
 using PS.BioBoard.Infrastructure.Persistence;
