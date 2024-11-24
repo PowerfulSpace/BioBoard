@@ -22,6 +22,11 @@ namespace PS.BioBoard.Infrastructure.Persistence.Repositories
             var person = await _dbContext.Persons.FirstOrDefaultAsync(x => x.Id == id); 
             return person!;
         }
+        public async Task<Person> GetByEmailAsync(string email)
+        {
+            var person = await _dbContext.Persons.FirstOrDefaultAsync(x => x.Email == email);
+            return person!;
+        }
 
         public async Task AddAsync(Person person)
         {

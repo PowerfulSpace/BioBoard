@@ -5,6 +5,7 @@ namespace PS.BioBoard.Application.Common.Interfaces.Persistence
     public interface IPersonRepository
     {
         Task<Person> GetByIdAsync(Guid id);
+        Task<Person> GetByEmailAsync(string email);
         Task<IEnumerable<Person>> GetAllAsync();
 
         Task AddAsync(Person person);

@@ -22,6 +22,12 @@ namespace PS.BioBoard.Application.Services.Persons
             return await _personRepository.GetByIdAsync(id);
         }
 
+        public async Task<Person> GetByEmailAsync(string email)
+        {
+            var person = await _personRepository.GetByEmailAsync(email);
+            return person!;
+        }
+
         public async Task AddAsync(Person person)
         {
             // Дополнительная бизнес-логика перед добавлением

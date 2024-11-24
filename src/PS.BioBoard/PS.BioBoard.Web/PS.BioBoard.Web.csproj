@@ -27,4 +27,10 @@
     <ProjectReference Include="..\PS.BioBoard.Infrastructure\PS.BioBoard.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="wwwroot\images\default-profile.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

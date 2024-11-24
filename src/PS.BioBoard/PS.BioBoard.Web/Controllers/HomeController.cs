@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using PS.BioBoard.Application.Services.Persons;
 using PS.BioBoard.Domain.Entities;
 using PS.BioBoard.Web.Models;
 using System.Diagnostics;
@@ -8,26 +10,18 @@ namespace PS.BioBoard.Web.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IPersonService _personService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IPersonService personService)
         {
             _logger = logger;
+            _personService = personService;
         }
 
         public IActionResult Index()
         {
-            // Пример объекта Person
-            var person = new Person
-            {
-                Id = Guid.NewGuid(),
-                Name = "Иван Иванов",
-                Bio = "Программист с 10-летним стажем. Люблю писать код, путешествовать и пробовать новые технологии.",
-                Email = "ivanov@example.com",
-                PhoneNumber = "+7 (999) 123-45-67",
-                ImageUrl = "/images/person.jpg" // Путь к изображению
-            };
-
-            return View(person);
+            var persons = _personService.GetAllAsync().GetAwaiter().GetResult();
+            return View(persons.First());
         }
 
 

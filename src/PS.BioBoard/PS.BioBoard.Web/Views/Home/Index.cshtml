@@ -17,7 +17,10 @@
     <div class="row align-items-center">
         <div class="col-md-4 text-center">
             <!-- Image -->
-            <img src="@Model.ImageUrl" alt="@Model.Name" class="img-fluid rounded-circle shadow-lg" style="max-width: 250px;">
+            <img src="@(string.IsNullOrEmpty(Model.ImageUrl) ? Url.Content("~/Images/default-profile.png") : Model.ImageUrl)"
+                 alt="@Model.Name"
+                 class="img-fluid rounded-circle shadow-lg"
+                 style="max-width: 250px;">
         </div>
         <div class="col-md-8">
             <!-- Bio -->
@@ -38,45 +41,3 @@
     </div>
 </div>
 
-
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
