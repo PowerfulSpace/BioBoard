@@ -1,8 +1,82 @@
-﻿@{
+﻿@model Person
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-5">
+    <!-- Header Section -->
+    <div class="row mb-4">
+        <div class="col text-center">
+            <h1 class="display-4 fw-bold">@Model.Name</h1>
+            <p class="lead text-muted">Ваш персональный эксперт</p>
+        </div>
+    </div>
+
+    <!-- Profile Section -->
+    <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+            <!-- Image -->
+            <img src="@Model.ImageUrl" alt="@Model.Name" class="img-fluid rounded-circle shadow-lg" style="max-width: 250px;">
+        </div>
+        <div class="col-md-8">
+            <!-- Bio -->
+            <h3>Обо мне</h3>
+            <p class="text-muted">@Model.Bio</p>
+        </div>
+    </div>
+
+    <!-- Contact Information Section -->
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <h4>Контактные данные</h4>
+            <ul class="list-unstyled">
+                <li><strong>Email:</strong> <a href="mailto:@Model.Email">@Model.Email</a></li>
+                <li><strong>Телефон:</strong> <a href="tel:@Model.PhoneNumber">@Model.PhoneNumber</a></li>
+            </ul>
+        </div>
+    </div>
 </div>
+
+
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
+<p>Hello</p>
